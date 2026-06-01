@@ -33,158 +33,8 @@
 
     <meta charset="UTF-8">
     <title>Phoebe's Website</title>
-
-    <style>
-
-        /* ==========================================================
-                            GLOBAL STYLES
-        ========================================================== */
-
-        body {
-            margin: 0;
-            padding: 0;
-            font-family: Georgia, serif;
-            color: #f3d6d6;
-
-            cursor: url("http://static.tumblr.com/u5vz4xb/Nr3nyrum8/cursor1.png"), auto;
-
-            background: linear-gradient(to bottom, #1a0000, #090000);
-        }
-
-        /* ==========================================================
-                            LINKS
-        ========================================================== */
-
-        a {
-            color: #ff8a8a;
-            text-decoration: none;
-
-            cursor: url("http://static.tumblr.com/u5vz4xb/OUGnyrumc/cursor2.png"), auto;
-
-            transition: 0.3s;
-        }
-
-        a:hover {
-            color: #ff2e2e;
-            text-shadow: 0 0 8px #ff2e2e;
-        }
-
-        /* ==========================================================
-                            BUTTONS
-        ========================================================== */
-
-        button {
-            background: #220000;
-            color: #ffb3b3;
-
-            border: 2px solid #7a0000;
-
-            padding: 12px 24px;
-
-            font-family: Georgia, serif;
-            font-size: 16px;
-
-            cursor: pointer;
-
-            transition: 0.3s;
-        }
-
-        button:hover {
-            background: #7a0000;
-            box-shadow: 0 0 12px #ff2e2e;
-        }
-
-        /* ==========================================================
-                            LAYOUT
-        ========================================================== */
-
-        header,
-        footer {
-            background: #160000;
-            text-align: center;
-
-            padding: 60px 20px;
-
-            box-shadow: 0 0 25px #300000;
-        }
-
-        header {
-            border-bottom: 4px solid #7a0000;
-        }
-
-        footer {
-            border-top: 4px solid #7a0000;
-            padding: 15px;
-        }
-
-        main {
-            padding: 20px;
-        }
-
-        section {
-            background: #120000;
-
-            border: 2px solid #4d0000;
-
-            padding: 20px;
-            margin-bottom: 25px;
-
-            box-shadow: 0 0 12px #220000;
-        }
-
-        /* ==========================================================
-                            TYPOGRAPHY
-        ========================================================== */
-
-        h1 {
-            font-size: 48px;
-
-            color: #ff2e2e;
-
-            letter-spacing: 2px;
-
-            text-shadow:
-                0 0 10px #660000,
-                2px 2px 6px #000;
-        }
-
-        h2 {
-            color: #ff8a8a;
-
-            border-bottom: 1px solid #660000;
-
-            padding-bottom: 5px;
-
-            text-shadow: 0 0 5px #220000;
-        }
-
-        h3 {
-            color: #d46a6a;
-        }
-
-        p {
-            line-height: 1.8;
-        }
-
-        /* ==========================================================
-                            LISTS
-        ========================================================== */
-
-        ol,
-        ul {
-            background: #1a0000;
-
-            padding: 15px 40px;
-
-            border-left: 3px solid #7a0000;
-        }
-
-        li {
-            color: #ffb3b3;
-            margin-bottom: 8px;
-        }
-
-    </style>
+    <link rel="stylesheet" href="style.css">
+    
 
 </head>
 
@@ -210,7 +60,7 @@
             <h2>Navigation</h2>
 
             <p>
-                <a href="#about">Jump to About Section</a>
+                <a href="about.html">About</a>
             </p>
 
             <p>
@@ -220,16 +70,11 @@
             </p>
 
             <button onclick="window.open('https://www.google.com', '_blank')">
-                Open Google
+                New Tab
             </button>
         </section>
 
-        <!-- About Section -->
 
-        <section id="about">
-            <h2>About This Site</h2>
-            <p>This is a simple HTML page.</p>
-        </section>
 
         <!-- Lists Section -->
 
