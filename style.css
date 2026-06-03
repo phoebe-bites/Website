@@ -1,4 +1,6 @@
-/* GLOBAL STYLES */
+/* =========================
+   GLOBAL STYLES
+========================= */
 body {
     margin: 0;
     padding: 0;
@@ -6,9 +8,12 @@ body {
     color: #f3d6d6;
     cursor: url("http://static.tumblr.com/u5vz4xb/Nr3nyrum8/cursor1.png"), auto;
     background: linear-gradient(to bottom, #1a0000, #090000);
+    text-align: center;
 }
 
-/* LINKS */
+/* =========================
+   LINKS
+========================= */
 a {
     color: #ff8a8a;
     text-decoration: none;
@@ -21,7 +26,9 @@ a:hover {
     text-shadow: 0 0 8px #ff2e2e;
 }
 
-/* BUTTONS */
+/* =========================
+   BUTTONS
+========================= */
 button {
     background: #220000;
     color: #ffb3b3;
@@ -38,44 +45,64 @@ button:hover {
     box-shadow: 0 0 12px #ff2e2e;
 }
 
-/* LAYOUT */
-header,
-footer {
-    background: #160000;
-    text-align: center;
-    padding: 60px 20px;
-    box-shadow: 0 0 25px #300000;
-}
-
+/* =========================
+   HEADER 
+========================= */
 header {
+    background: radial-gradient(circle at center, #1a0000 0%, #090000 100%);
+    text-align: center;
+    padding: 90px 20px;
+    box-shadow: 0 0 40px #000;
     border-bottom: 4px solid #7a0000;
 }
 
-footer {
-    border-top: 4px solid #7a0000;
-    padding: 15px;
+/* MAIN TITLE */
+#main-title {
+    font-family: 'UnifrakturCook', serif;
+    font-size: 72px;
+    letter-spacing: 6px;
+    color: #ff2e2e;
+    text-transform: uppercase;
+    text-shadow:
+        0 0 10px #7a0000,
+        0 0 25px #ff2e2e,
+        0 0 40px #300000;
+    margin: 0;
 }
 
+/*SUB-GLOW EFFECT (if tagline gets added) */
+header::after {
+    content: "";
+    display: block;
+    width: 60%;
+    height: 2px;
+    margin: 20px auto 0;
+    background: linear-gradient(to right, transparent, #7a0000, transparent);
+    box-shadow: 0 0 10px #7a0000;
+}
+
+/* =========================
+   MAIN LAYOUT
+========================= */
 main {
     padding: 20px;
 }
 
+/* SECTIONS */
 section {
+    width: 85%;
+    height: auto;
+    margin: 0 auto 35px auto;
     background: #120000;
     border: 2px solid #4d0000;
-    padding: 20px;
-    margin-bottom: 25px;
+    padding: 30px;
     box-shadow: 0 0 12px #220000;
+    text-align: left;
 }
 
-/* TYPOGRAPHY */
-h1 {
-    font-size: 48px;
-    color: #ff2e2e;
-    letter-spacing: 2px;
-    text-shadow: 0 0 10px #660000, 2px 2px 6px #000;
-}
-
+/* =========================
+   TYPOGRAPHY
+========================= */
 h2 {
     color: #ff8a8a;
     border-bottom: 1px solid #660000;
@@ -91,7 +118,27 @@ p {
     line-height: 1.8;
 }
 
-/* LISTS */
+/* CLASS SELECTOR */
+.gothic-accent {
+    color: #ff2e2e;
+    font-weight: bold;
+    text-shadow: 0 0 10px #7a0000;
+}
+
+/* =========================
+   STRONG ELEMENT
+========================= */
+strong {
+    font-weight: 900;
+    color: #ff2e2e;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 0 0 10px #7a0000, 0 0 20px #300000;
+}
+
+/* =========================
+   LISTS
+========================= */
 ol,
 ul {
     background: #1a0000;
@@ -102,21 +149,21 @@ ul {
 li {
     color: #ffb3b3;
     margin-bottom: 8px;
-
-}
-body {
-    font-family: 'Cinzel Decorative', Georgia, serif;
 }
 
-h1 {
-    font-family: 'UnifrakturCook', serif;
-}
-
+/* =========================
+   IMAGES
+========================= */
 img {
-    border: 3px solid #4d0000;
+    border: 2px solid #7a0000;
     padding: 6px;
     background: #120000;
-    box-shadow: 0 0 20px #220000;
+    box-shadow: 0 0 15px #300000;
+    filter: contrast(1.1) brightness(0.9);
+    border-radius: 6px;
+    display: block;
+    margin: 15px auto;
+    transition: 0.3s ease;
 }
 
 img:hover {
@@ -125,28 +172,26 @@ img:hover {
     filter: contrast(1.2) brightness(1);
 }
 
-img {
-    border: 2px solid #7a0000;
-    box-shadow: 0 0 15px #300000;
-    filter: contrast(1.1) brightness(0.9);
-    border-radius: 6px;
-    transition: 0.3s ease;
+/* =========================
+   ID SELECTOR
+========================= */
+#main-title {
+    font-family: 'UnifrakturCook', serif;
+    font-size: 72px;
+    letter-spacing: 6px;
+    color: #ff2e2e;
+    text-transform: uppercase;
+    text-shadow:
+        0 0 10px #7a0000,
+        0 0 25px #ff2e2e,
+        0 0 40px #300000;
+    margin: 0;
 }
 
-section {
-    padding: 30px;
-    margin-bottom: 35px;
-}
-
-img {
-    display: block;
-    margin: 15px auto;
-}
-
-section p,
-section button,
-section img,
-section ol,
-section ul {
-    margin-bottom: 12px;
+/* =========================
+   OPTIONAL CONTAINER
+========================= */
+.container {
+    width: 85%;
+    margin: 0 auto;
 }
