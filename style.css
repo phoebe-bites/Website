@@ -180,6 +180,18 @@ img:hover {
 }
 
 /* =========================
+   BODY BACKGROUND
+========================= */
+
+body {
+    background-image: url("images/background.png");
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+/* =========================
    ID SELECTOR
 ========================= */
 #main-title {
@@ -244,7 +256,7 @@ img:hover {
 }
 
 /* =========================
-   GLITCH EFFECT (KILLSTAR-STYLE)
+   GLITCH EFFECT
 ========================= */
 
 /* GLITCH LAYERS */
