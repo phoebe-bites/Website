@@ -296,7 +296,7 @@ img:hover {
 }
 
    /* =========================
-      BUTTON (BOTTOM LEFT)
+      BUTTON 
 ========================= */
 @keyframes pulseGlow {
     0% { box-shadow: 0 0 8px #220000; }
@@ -306,4 +306,68 @@ img:hover {
 
 .floating-btn {
     animation: pulseGlow 2.5s infinite;
+}
+
+/* =========================
+   FLOATING BUTTON TOOLTIP
+========================= */
+
+.floating-btn {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    z-index: 1000;
+
+    background: #120000;
+    color: #ff8a8a;
+    border: 2px solid #7a0000;
+
+    padding: 12px 18px;
+    font-family: Georgia, serif;
+    font-weight: bold;
+
+    cursor: pointer;
+    transition: 0.3s;
+
+    box-shadow: 0 0 10px #220000;
+}
+
+/* HOVER EFFECT */
+.floating-btn:hover {
+    background: #7a0000;
+    color: #ff2e2e;
+    transform: scale(1.05);
+    box-shadow: 0 0 15px #ff2e2e;
+}
+
+/* =========================
+   TOOLTIP TEXT (HOVER LABEL)
+========================= */
+
+.floating-btn::after {
+    content: "Leaving so soon?";
+    position: absolute;
+
+    left: 110%;
+    bottom: 50%;
+    transform: translateY(50%);
+
+    background: #120000;
+    color: #ffb3b3;
+
+    padding: 6px 10px;
+    border: 1px solid #7a0000;
+
+    font-size: 12px;
+    white-space: nowrap;
+
+    opacity: 0;
+    pointer-events: none;
+
+    transition: 0.3s;
+}
+
+/* SHOW TOOLTIP ON HOVER */
+.floating-btn:hover::after {
+    opacity: 1;
 }
