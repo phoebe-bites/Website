@@ -32,7 +32,7 @@
     =========================================================== -->
 
     <meta charset="UTF-8">
-    <title>Phoebe's Website</title>
+    <title>Vita Aeterna</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=UnifrakturCook:wght@700&display=swap" rel="stylesheet">
 
@@ -45,70 +45,81 @@
     =========================================================== -->
 
     <header>
-        <h1 id="main-title">Welcome to My Website</h1>
+        <h1 id="main-title">Vita Aeterna</h1>
+
+        <p>
+            <em>A sanctuary of shadows and midnight beauty.</em>
+        </p>
     </header>
 
     <!-- ==========================================================
-                            MAIN CONTENT
+                        NAVIGATION BAR (FULL WIDTH)
     =========================================================== -->
 
-    <main>
+    <nav class="nav-bar">
 
-        <!-- Navigation Section -->
+        <a href="about.html" data-text="ABOUT">About</a>
 
-        <section class="container">
+        <a href="https://www.killstar.com" target="_blank" data-text="KILLSTAR">
+            Killstar
+        </a>
 
-            <h2>Navigation</h2>
+    </nav>
 
-            <p class="gothic-accent">
-                <a href="about.html">About</a>
-            </p>
+    <!-- ==========================================================
+                        CONTENT WRAPPER (DIV)
+    =========================================================== -->
 
-            <p>
-                <a href="https://www.killstar.com" target="_blank">
-                    Visit Killstar
-                </a>
-            </p>
+    <div class="gothic-wrapper">
 
-            <button onclick="window.open('https://www.google.com', '_blank')">
-                New Tab
-            </button>
+        <!-- ==========================================================
+                            MAIN CONTENT
+        =========================================================== -->
 
-        </section>
+        <main>
 
-        <!-- Gallery Section -->
+            <!-- Gallery Section -->
 
-        <section>
+            <section>
 
-            <h2>Gallery</h2>
+                <h2>Gallery</h2>
 
-            <img src="images/wine.jpg" alt="sweet nectar" width="500" height="300">
+                <img src="images/wine.jpg" alt="sweet nectar" width="500" height="300">
 
-        </section>
+            </section>
 
-        <!-- Lists Section -->
+            <!-- Lists Section -->
 
-        <section>
+            <section>
 
-            <h2>Ordered List</h2>
+                <h2>Ordered List</h2>
 
-            <ol>
-                <li>Orange</li>
-                <li>Yellow</li>
-                <li>Pink</li>
-            </ol>
+                <ol>
+                    <li>Orange</li>
+                    <li>Yellow</li>
+                    <li>Pink</li>
+                </ol>
 
-            <h2>Unordered List</h2>
+                <h2>Unordered List</h2>
 
-            <ul>
-                <li>Purple</li>
-                <li>Red</li>
-                <li>Blue</li>
-            </ul>
+                <ul>
+                    <li>Purple</li>
+                    <li>Red</li>
+                    <li>Blue</li>
+                </ul>
 
-        </section>
+            </section>
 
-    </main>
+        </main>
+
+    </div>
+    <!-- =========================
+      BUTTON (BOTTOM LEFT)
+========================= -->
+
+<button class="floating-btn" onclick="window.open('https://www.google.com', '_blank')">
+    New Tab
+</button>
 
     <!-- ==========================================================
                             FOOTER
@@ -119,5 +130,3 @@
     </footer>
 
 </body>
-
-</html>

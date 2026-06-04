@@ -91,6 +91,7 @@ main {
 /* SECTIONS */
 section {
     width: 85%;
+    min-height: 30%;
     height: auto;
     margin: 0 auto 35px auto;
     background: #120000;
@@ -118,6 +119,12 @@ p {
     line-height: 1.8;
 }
 
+/* EM ELEMENT */
+em {
+    font-style: italic;
+    color: #d46a6a;
+    letter-spacing: 1px;
+}
 /* CLASS SELECTOR */
 .gothic-accent {
     color: #ff2e2e;
@@ -194,4 +201,109 @@ img:hover {
 .container {
     width: 85%;
     margin: 0 auto;
+}
+
+
+/* =========================
+   NAVIGATION BAR (FULL WIDTH + STICKY)
+========================= */
+
+.nav-bar {
+    width: 100%;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+
+    background: #120000;
+    border-top: 2px solid #7a0000;
+    border-bottom: 2px solid #7a0000;
+
+    padding: 15px;
+    text-align: center;
+
+    box-sizing: border-box;
+}
+
+/* NAVIGATION LINKS */
+.nav-bar a {
+    position: relative;
+    color: #ff8a8a;
+    margin: 0 18px;
+    text-decoration: none;
+    font-weight: bold;
+    letter-spacing: 2px;
+    display: inline-block;
+    transition: 0.3s;
+}
+
+/* NAV HOVER EFFECT */
+.nav-bar a:hover {
+    color: #ff2e2e;
+    text-shadow: 0 0 10px #ff2e2e, 0 0 20px #7a0000;
+    transform: scale(1.05);
+}
+
+/* =========================
+   GLITCH EFFECT (KILLSTAR-STYLE)
+========================= */
+
+/* GLITCH LAYERS */
+.nav-bar a::before,
+.nav-bar a::after {
+    content: attr(data-text);
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    opacity: 0;
+}
+
+/* TOP GLITCH */
+.nav-bar a:hover::before {
+    animation: glitchTop 0.3s infinite linear alternate;
+    color: #ff2e2e;
+    transform: translate(1px, -1px);
+    opacity: 1;
+}
+
+/* BOTTOM GLITCH */
+.nav-bar a:hover::after {
+    animation: glitchBottom 0.3s infinite linear alternate;
+    color: #7a0000;
+    transform: translate(-1px, 1px);
+    opacity: 1;
+}
+
+/* GLITCH ANIMATIONS */
+@keyframes glitchTop {
+    0% { transform: translate(1px, -1px); }
+    100% { transform: translate(2px, -2px); }
+}
+
+@keyframes glitchBottom {
+    0% { transform: translate(-1px, 1px); }
+    100% { transform: translate(-2px, 2px); }
+}
+
+/* =========================
+   WRAPPER CONTAINER (CENTERED CONTENT)
+========================= */
+
+.gothic-wrapper {
+    width: 85%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+   /* =========================
+      BUTTON (BOTTOM LEFT)
+========================= */
+@keyframes pulseGlow {
+    0% { box-shadow: 0 0 8px #220000; }
+    50% { box-shadow: 0 0 18px #ff2e2e; }
+    100% { box-shadow: 0 0 8px #220000; }
+}
+
+.floating-btn {
+    animation: pulseGlow 2.5s infinite;
 }
