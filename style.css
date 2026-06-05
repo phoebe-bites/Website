@@ -159,17 +159,100 @@ li {
 }
 
 /* =========================
+   GALLERY GRID
+========================= */
+
+.gallery-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(250px, 1fr));
+
+    gap: 20px;
+
+    margin-top: 20px;
+}
+
+/* =========================
+   GALLERY GRID
+========================= */
+
+.gallery-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(250px, 1fr));
+
+    gap: 20px;
+
+    margin-top: 20px;
+}
+
+/* =========================
+   PRODUCT HOVER IMAGES
+========================= */
+
+.product-card {
+    text-align: center;
+}
+
+.product-image-slot {
+    position: relative;
+    overflow: hidden;
+}
+
+.product-image-slot img {
+    width: 100%;
+    display: block;
+    transition: opacity 0.4s ease;
+}
+
+.product-front {
+    opacity: 1;
+}
+
+.product-hover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+}
+
+.product-image-slot:hover .product-front {
+    opacity: 0;
+}
+
+.product-image-slot:hover .product-hover {
+    opacity: 1;
+}
+
+.product-card h3 {
+    margin-top: 15px;
+    color: #ff8a8a;
+}
+
+/* =========================
    IMAGES
 ========================= */
+
 img {
+
+    max-width: 100%;
+
     border: 2px solid #7a0000;
+
     padding: 6px;
+
     background: #120000;
+
     box-shadow: 0 0 15px #300000;
+
     filter: contrast(1.1) brightness(0.9);
+
     border-radius: 6px;
-    display: block;
-    margin: 15px auto;
+
     transition: 0.3s ease;
 }
 
@@ -215,7 +298,6 @@ body {
     margin: 0 auto;
 }
 
-
 /* =========================
    NAVIGATION BAR (FULL WIDTH + STICKY)
 ========================= */
@@ -223,7 +305,7 @@ body {
 .nav-bar {
     width: 100%;
     position: sticky;
-    top: 0;
+    top: 46px0;
     z-index: 999;
 
     background: #120000;
@@ -253,6 +335,62 @@ body {
     color: #ff2e2e;
     text-shadow: 0 0 10px #ff2e2e, 0 0 20px #7a0000;
     transform: scale(1.05);
+}
+
+
+.hero-overlay {
+    background: rgba(0,0,0,0.6);
+
+    padding: 40px 60px;
+
+    border: 1px solid #7a0000;
+}
+
+.hero-overlay h2 {
+    font-size: 3em;
+    text-align: center;
+}
+
+/* =========================
+   STICKY MOVING TEXT
+========================= */
+
+.moving-text-bar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    overflow: hidden;
+
+    background: #090000;
+    border-top: 2px solid #7a0000;
+    border-bottom: 2px solid #7a0000;
+
+    padding: 10px 0;
+    white-space: nowrap;
+}
+
+.moving-text-bar strong {
+    display: inline-block;
+
+    font-size: 20px;
+    letter-spacing: 4px;
+
+    animation: moveAcross 12s linear infinite;
+}
+
+/* =========================
+   MOVING TEXT ANIMATION
+========================= */
+
+@keyframes moveAcross {
+    0% {
+        transform: translateX(-100%);
+    }
+
+    100% {
+        transform: translateX(100vw);
+    }
 }
 
 /* =========================
@@ -382,4 +520,24 @@ body {
 /* SHOW TOOLTIP ON HOVER */
 .floating-btn:hover::after {
     opacity: 1;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+
+    background: #120000;
+
+    border-top: 2px solid #7a0000;
+
+    padding: 30px;
+
+    margin-top: 50px;
+
+    text-align: center;
+
+    box-shadow: 0 0 20px #000;
 }

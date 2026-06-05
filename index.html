@@ -53,18 +53,40 @@
     </header>
 
     <!-- ==========================================================
+                    STICKY MOVING TEXT
+=========================================================== -->
+
+<div class="moving-text-bar">
+
+    <strong>Eternity Awaits</strong>
+
+</div>
+
+    <!-- ==========================================================
                         NAVIGATION BAR (FULL WIDTH)
     =========================================================== -->
 
     <nav class="nav-bar">
 
-        <a href="about.html" data-text="ABOUT">About</a>
+    <a href="index.html" data-text="HOME">Home</a>
 
-        <a href="https://www.killstar.com" target="_blank" data-text="KILLSTAR">
-            Killstar
-        </a>
+    <a href="about.html" data-text="ABOUT">About</a>
 
-    </nav>
+    <a href="collections.html" data-text="COLLECTIONS">
+        Collections
+    </a>
+
+    <a href="contact.html" data-text="CONTACT">
+        Contact
+    </a>
+
+    <a href="https://www.killstar.com"
+       target="_blank"
+       data-text="KILLSTAR">
+        Killstar
+    </a>
+
+</nav>
 
     <!-- ==========================================================
                         CONTENT WRAPPER (DIV)
@@ -78,44 +100,86 @@
 
         <main>
 
-            <!-- Gallery Section -->
+          
+   <!-- Gallery Section -->
 
-            <section>
+<section>
 
-                <h2>Gallery</h2>
+    <h2>Featured Collection</h2>
 
-                <img src="images/wine.jpg" alt="sweet nectar" width="500" height="300">
+    <div class="gallery-grid">
 
-            </section>
+        <!-- Product 1 -->
 
-            <!-- Lists Section -->
+        <div class="product-card">
 
-            <section>
+            <div class="product-image-slot">
 
-                <h2>Ordered List</h2>
+                <img class="product-front"
+                     src="images/spider-ring1.jpg"
+                     alt="Aranea Ring Front">
 
-                <ol>
-                    <li>Orange</li>
-                    <li>Yellow</li>
-                    <li>Pink</li>
-                </ol>
+                <img class="product-hover"
+                     src="images/spider-ring2.jpg"
+                     alt="Aranea Ring Back">
 
-                <h2>Unordered List</h2>
+            </div>
 
-                <ul>
-                    <li>Purple</li>
-                    <li>Red</li>
-                    <li>Blue</li>
-                </ul>
+            <h3>Aranea Ring</h3>
 
-            </section>
+        </div>
+
+        <!-- Product 2 -->
+
+        <div class="product-card">
+
+            <div class="product-image-slot">
+
+                <img class="product-front"
+                     src="images/vertebrae1.jpg"
+                     alt="Vertebrae Ring Front">
+
+                <img class="product-hover"
+                     src="images/vertebrae2.jpg"
+                     alt="Vertebrae Ring Back">
+
+            </div>
+
+            <h3>Vertebrae Ring</h3>
+
+        </div>
+
+        <!-- Product 3 -->
+
+        <div class="product-card">
+
+            <div class="product-image-slot">
+
+                <img class="product-front"
+                     src="images/blood-moon1.jpg"
+                     alt="blood moon pendant front">
+
+                <img class="product-hover"
+                     src="images/blood-moon2.jpg"
+                     alt="blood moon pendant back">
+
+            </div>
+
+            <h3>Blood Moon Pendant</h3>
+
+        </div>
+
+    </div>
+
+</section>
 
         </main>
 
     </div>
-    <!-- =========================
+    
+        <!-- =========================
       BUTTON (BOTTOM LEFT)
-========================= -->
+        ========================= -->
 
 <button class="floating-btn" onclick="window.open('https://www.google.com', '_blank')">
     New Tab
@@ -125,8 +189,19 @@
                             FOOTER
     =========================================================== -->
 
-    <footer>
-        <h3>Footer Section</h3>
-    </footer>
+ <footer>
 
+    <h3>Vita Aeterna</h3>
+
+    <p>
+        Dark fashion inspired by eternity.
+    </p>
+
+    <p>
+        © 2026 Vita Aeterna
+    </p>
+
+</footer>
 </body>
+
+</html>
